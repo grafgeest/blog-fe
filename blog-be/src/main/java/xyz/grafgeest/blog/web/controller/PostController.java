@@ -78,8 +78,6 @@ public class PostController {
         postRepository.save(currentPost);
         return new ResponseEntity<>(currentPost, HttpStatus.OK);
     }
-
-
     @DeleteMapping("/posts/{id}")
     public ResponseEntity<Post> deletePost(@PathVariable("id") Long id) {
         log.debug("Fetching & Deleting Post with id : {}", id);
@@ -93,7 +91,7 @@ public class PostController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @DeleteMapping("/users")
+    @DeleteMapping("/posts")
     public ResponseEntity<Post> deleteAllPosts() {
         log.debug("Deleting All Posts");
         postRepository.deleteAll();

@@ -27,3 +27,5 @@ node_modules/
 *.iml
 static/
 */target/
+dist/
+*/dist/
